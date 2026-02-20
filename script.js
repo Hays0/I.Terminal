@@ -20,7 +20,7 @@ function handleCommand(command) {
   const cmd = parts[0];
 
   if (cmd === "help") {
-    print("Commands: help, set, get, delete, list, clear");
+    print("Commands: help, set, get, delete, list, pswgen, clear");
   }
 
   else if (cmd === "set") {
@@ -29,6 +29,11 @@ function handleCommand(command) {
     store[key] = value;
     save();
     print("Saved.");
+  }
+  
+  else if (cmd === "pswgen") {
+    const randomValue = Math.random().toString(36).substring(2, 25);
+    print("Random Password Generated!: " + randomValue);
   }
 
   else if (cmd === "get") {
@@ -73,6 +78,7 @@ function showIntro() {
   print("get    - Retrieve a value");
   print("delete - Remove a value");
   print("list   - Show all stored values");
+  print("pswgen - Generate a random password");
   print("clear  - Clear terminal");
   print("");
 }
