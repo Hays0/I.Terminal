@@ -54,6 +54,7 @@ function handleCommand(command) {
 
   else if (cmd === "clear") {
     output.innerHTML = "";
+    showIntro();
   }
 
   else {
