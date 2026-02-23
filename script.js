@@ -20,7 +20,7 @@ function handleCommand(command) {
   const cmd = parts[0];
 
   if (cmd === "help") {
-    print("Commands: help, set, get, delete, list, pswgen, hello, clear");
+    print("Commands: help, set, get, delete, list, pswgen, Joe, clear");
   }
 
   else if (cmd === "set") {
@@ -46,6 +46,10 @@ function handleCommand(command) {
     delete store[key];
     save();
     print("Deleted.");
+  }
+
+  else if (cmd === "Joe") {
+    print("Hello, my name is joe. I will now murder you and you will die!");
   }
 
   else if (cmd === "list") {
@@ -80,7 +84,7 @@ function showIntro() {
   print("delete - Remove a value");
   print("list   - Show all stored values");
   print("pswgen - Generate a random password");
-  print("hello  - Says hello back");
+  print("Joe    - Oh, hey joe!");
   print("clear  - Clear terminal");
   print("");
 }
