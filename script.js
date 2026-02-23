@@ -36,7 +36,7 @@ function handleCommand(command) {
     print("Random Password Generated!: " + randomValue);
   }
 
-  else if (cmd === "Hello", "hello") {
+  else if (cmd === "Hello") {
     const hello = "Hello";
     print("You said hello, now I will say " + hello);
   }
